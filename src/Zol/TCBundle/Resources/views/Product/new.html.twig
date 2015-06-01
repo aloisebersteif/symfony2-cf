@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}Manage product category{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_row(form.name) }}
+
+        <h3>Products</h3>
+        <ul class="products" data-prototype="{{ form_widget(form.products.vars.prototype)|e }}">
+            {% for product in form.products %}
+                <li>{{ form_row(product.name) }}</li>
+            {% endfor %}
+        </ul>
+    {{ form_end(form) }}
+    
+    {% block javascripts %}
+        {{ parent() }}
+        {% javascripts
+            '@ZolTCBundle/Resources/public/js/manage_products.js'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
+    
+{% endblock %}
