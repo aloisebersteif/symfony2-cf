@@ -1,36 +1,35 @@
-Embeding collections of forms with Symfony 2.3.* example
-========================================================
+Example of Symfony collection of forms embedding
+================================================
 
-One of the most challenging task a web developer faces is dealing with forms.
+One of the most challenging task a web developers face is dealing with forms.
 
-This is a referential example for embedding of Symfony collection of
-forms, which I believe belongs to one of the most challenging tasks.
+This is a referential example for one of the most frequently solved task: 
+embedding a collection of forms (using Symfony 2.3.*).
 
-The goal of this repository is to create a simple example of Symfony form collection  
-embedding, which would prevent one from reinventing a wheel every time
-he/she is facing the following tasks:
+The goal of this repository is to create a simple example of Symfony form   
+collection embedding, which would prevent reinventing a wheel every time
+such task emerges. The following tasks are solved:
 
-  * creating Doctrine2 OneToMany relation between entities
+  * Doctrine2 OneToMany relation between Entities setup
   
-  * create a Symfony form with embedded collection of forms
+  * embedding Symfony form collection
 
-  * dynamicly add/remove elements from the form by using JavaScript/
-    Prototype
+  * dynamic management (add and delete) elements from the embedded form
 
-  * dealing with errors (preventing duplicates from been added)
+  * catching form errors (preventing duplicate from been added to database)
 
-The project was created basically on the basis of [official Symfony 
-documentation][14]. Most snippets of code were taken from there, but not
-without my customization.
+The project is created mostly on the basis of [official Symfony 
+documentation][14]. Most snippets of code were taken from there, though 
+not without my own contribution.
 
-The following optional vendor bundles were used:
+The following optional vendor bundles were included:
 ------------------------------------------------
 
   * [components/jquery][15]
 
   * [twbs/bootstrap][16]
 
-Here below follows the out-of-a-box readme for Symfony Standard Edition 2.3.*.
+Below follows the standard part of Symfony Standard Edition 2.3.* README.
 
 Symfony Standard Edition
 ------------------------
