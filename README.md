@@ -1,5 +1,39 @@
+Embeding collections of forms with Symfony 2.3.* example
+========================================================
+
+One of the most challenging task a web developer faces is dealing with forms.
+
+This is a referential example for embedding of Symfony collection of
+forms, which I believe belongs to one of the most challenging tasks.
+
+The goal of this repository is to create a simple example of Symfony form collection  
+embedding, which would prevent one from reinventing a wheel every time
+he/she is facing the following tasks:
+
+  * creating Doctrine2 OneToMany relation between entities
+  
+  * create a Symfony form with embedded collection of forms
+
+  * dynamicly add/remove elements from the form by using JavaScript/
+    Prototype
+
+  * dealing with errors (preventing duplicates from been added)
+
+The project was created basically on the basis of [official Symfony 
+documentation][14]. Most snippets of code were taken from there, but not
+without my customization.
+
+The following optional vendor bundles were used:
+------------------------------------------------
+
+  * [components/jquery][15]
+
+  * [twbs/bootstrap][16]
+
+Here below follows the out-of-a-box readme for Symfony Standard Edition 2.3.*.
+
 Symfony Standard Edition
-========================
+------------------------
 
 Welcome to the Symfony Standard Edition - a fully-functional Symfony2
 application that you can use as the skeleton for your new applications.
@@ -67,3 +101,6 @@ Enjoy!
 [11]: http://symfony.com/doc/2.3/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.3/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+[14]: http://symfony.com/doc/2.3/cookbook/form/form_collections.html
+[15]: https://github.com/components/jquery
+[16]: https://github.com/twbs/bootstrap
