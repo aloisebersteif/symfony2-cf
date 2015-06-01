@@ -7,7 +7,15 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body %}
+            {% block javascripts %}
+                {% javascripts
+                    '%kernel.root_dir%/../vendor/components/jquery/jquery.js'
+                    '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.js'
+                %}
+                <script src="{{ asset_url }}"></script>
+                {% endjavascripts %}
+            {% endblock %}
+        {% endblock %}
     </body>
 </html>

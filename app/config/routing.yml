@@ -1,3 +1,8 @@
+zol_tc:
+    resource: "@ZolTCBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
