@@ -14,7 +14,7 @@ use Zol\TCBundle\Form\CategoryType;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/test_form")
+     * @Route("/")
      * @Template()
      */
     
