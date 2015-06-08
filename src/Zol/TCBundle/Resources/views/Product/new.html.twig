@@ -2,18 +2,29 @@
 
 {% block title %}Manage product category{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+        {% stylesheets filter='cssrewrite' 
+           '@ZolTCBundle/Resources/public/css/form.css'
+            %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+{% endblock %}
+    
 {% block body %}
-    {{ form_start(form) }}
-        {{ form_row(form.name) }}
+    <h1>Example of embedding collection of forms</h1>
+    <div class="btn btn-default">{{ form_start(form) }}
+        <div class="navbar-form">{{ form_row(form.name) }}</div>
 
         <h3>Products</h3>
-        <ul class="products" data-prototype="{{ form_widget(form.products.vars.prototype)|e }}">
+        <ul class="products" data-prototype="
+            {{ form_widget(form.products.vars.prototype)|e }}">
             {% for product in form.products %}
                 <li>{{ form_row(product.name) }}</li>
             {% endfor %}
         </ul>
     {{ form_end(form) }}
-    
+    </div>
     {% block javascripts %}
         {{ parent() }}
         {% javascripts
@@ -22,5 +33,4 @@
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% endblock %}
-    
 {% endblock %}
