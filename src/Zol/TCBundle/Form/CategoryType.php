@@ -1,5 +1,5 @@
 <?php
-//872 245
+
 namespace Zol\TCBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
@@ -15,7 +15,11 @@ class CategoryType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
+            ->add('name', 'text', array(
+                'label' => 'Category:',
+                'attr' => array('class' => 'form-control'),
+            )
+                    )
             ->add('products', 'collection', array(
                 'type' => new ProductType(),
                 'allow_add' => true,

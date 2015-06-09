@@ -46,16 +46,6 @@ ul li {
 }
 
 a.remove_product {
-    background:url(images/remove.gif) no-repeat;
+    background:url(../../Resources/public/css/images/remove.gif) no-repeat;
     //background-size: 100px 100px;
-    text-indent: -9999px;
-}
-
-a.remove_product img {
-    background-repeat: no-repeat !important;
-}
-
-ul.products {
-    margin-left: -18px;
-    padding-left: -10px;
 }

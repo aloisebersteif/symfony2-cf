@@ -37,7 +37,10 @@ class DefaultController extends Controller
         
         $form = $this->createForm(new CategoryType(), $category);
         
-        $form->add('submit', 'submit', array('label' => 'Create'));
+        $form->add('submit', 'submit', array(
+            'label' => 'Create',
+            'attr' => array('class' => 'btn btn-lg btn-primary btn-block'),
+            ));
         
         $form->handleRequest($request);
         
