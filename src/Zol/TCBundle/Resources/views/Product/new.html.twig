@@ -1,43 +1,43 @@
 {% extends '::base.html.twig' %}
 
-{% block title %}Manage product category{% endblock %}
+{% block title %}Manage category{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
         {% stylesheets filter='cssrewrite' 
            '@ZolTCBundle/Resources/public/css/form.css'
             %}
-        <link rel="stylesheet" href="{{ asset_url }}"/>
+            <link rel="stylesheet" href="{{ asset_url }}"/>
         {% endstylesheets %}
 {% endblock %}
     
 {% block body %}
     <div class="container">
         <div class="form-category>"
-            <div class="btn btn-default">Example of form collection embedding</div>
+            <div class="btn btn-default">Form collection embedding example</div>
             <div class="btn btn-default">{{ form_start(form) }}
-                {#{ form_errors(form.name) }#}
-                <div class="navbar-form">{{ form_row(form.name) }}</div>
-
-                <label class="heading required">Add products:</label>
-                <ul class="products" data-prototype="
-                    {{ form_widget(form.products.vars.prototype)|e }}">
-                    {% for product in form.products %}
-                        <li>{{ form_row(product.name) }}</li>
-                    {% endfor %}
-                </ul>
-                
+                <div class="navbar-form">{{ form_row(form.name) }}
+                    <label class="required">Products:</label>
+                    <ul class="products" data-prototype="
+                        {{ form_widget(form.products.vars.prototype)|e }}">
+                        {% for product in form.products %}
+                            <li>{{ form_row(product.name) }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
                {% block submit_widget %}{% endblock %}
             {{ form_end(form) }}
             </div>
         </div>
     </div>
+            
     {% block javascripts %}
         {{ parent() }}
         {% javascripts
             '@ZolTCBundle/Resources/public/js/manage_products.js'
         %}
-        <script src="{{ asset_url }}"></script>
+            <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% endblock %}
+    
 {% endblock %}

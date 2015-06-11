@@ -6,8 +6,6 @@ body {
 
 .form-category {
   width: 100%;
-  //max-width: 330px;
-  padding: 15px;
   margin: 0 auto;
 }
 .form-category .form-category-heading,
@@ -47,15 +45,28 @@ ul li {
 
 a.remove_product {
     background:url(images/remove.gif) no-repeat;
-    //background-size: 100px 100px;
     text-indent: -9999px;
-}
-
-a.remove_product img {
-    background-repeat: no-repeat !important;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 0 20px 5px;
 }
 
 ul.products {
-    margin-left: -18px;
-    padding-left: -10px;
+    display:block;
+}
+
+ul.products li div,
+ul.products li div div {
+    display: inline-block;
+    margin-left: -15px;
+}
+
+label.required {
+    text-align: left;
+    display:block;
+}
+
+a.add_prod_link {
+    margin-left: -144px;
 }

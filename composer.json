@@ -21,7 +21,8 @@
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
         "twbs/bootstrap": "3.2.*",
-        "components/jquery": "1.9.*"
+        "components/jquery": "1.9.*",
+        "raulfraile/ladybug-bundle": "~1.0"
     },
     "scripts": {
         "post-install-cmd": [

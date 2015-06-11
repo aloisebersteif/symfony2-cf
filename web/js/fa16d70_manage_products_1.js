@@ -4,7 +4,7 @@ var $collectionHolder;
 var $addProdLink = $('<a href="#" class="add_prod_link">Add a product</a>');
 var $newLinkLi = $('<div></div>').append($addProdLink);
 var $removeFormA = $('<a class="remove_product" onclick="var x = \n\
-this.parentNode;x.parentNode.removeChild(x);" href="#">remove this product</a>');
+this.parentNode;x.parentNode.removeChild(x);" href="#">remove</a>');
 
 jQuery(document).ready(function() {
     // Get the ul that holds the collection of products

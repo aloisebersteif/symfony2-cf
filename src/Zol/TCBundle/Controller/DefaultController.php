@@ -22,18 +22,8 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         
-        $product1 = new Product();
-        $product1->setName('test product 1');
-        $product2 = new Product();
-        $product2->setName('test product 2');
-        
-        $em->persist($product1);
-        $em->persist($product2);
-        
         $category = new Category();
-        $category->setName('test category 1');
-        $category->getProducts()->add($product1);
-        $category->getProducts()->add($product2);    
+        $category->setName('');    
         
         $form = $this->createForm(new CategoryType(), $category);
         
@@ -50,7 +40,7 @@ class DefaultController extends Controller
             
             try {
                 $em->flush();
-            } 
+            }
             catch (\PDOException $e) {
                 if (0 === strpos($e->getCode(), '23')) {
                     return new Response ($e->getMessage());

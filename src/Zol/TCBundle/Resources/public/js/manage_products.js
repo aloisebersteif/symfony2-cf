@@ -4,7 +4,7 @@ var $collectionHolder;
 var $addProdLink = $('<a href="#" class="add_prod_link">Add a product</a>');
 var $newLinkLi = $('<div></div>').append($addProdLink);
 var $removeFormA = $('<a class="remove_product" onclick="var x = \n\
-this.parentNode;x.parentNode.removeChild(x);" href="#"><img src="images/remove.gif" alt="remove"></a>');
+this.parentNode;x.parentNode.removeChild(x);" href="#">remove</a>');
 
 jQuery(document).ready(function() {
     // Get the ul that holds the collection of products
@@ -25,7 +25,10 @@ jQuery(document).ready(function() {
         addProductForm($collectionHolder, $newLinkLi);
     });
     
+    //Get the li that holds every product
     $prodFormLi = $collectionHolder.find('li');
+    
+    //Add 'remove product' linl to every product
     $prodFormLi.append($removeFormA);
     
 });
