@@ -22,12 +22,14 @@ The project is created mostly on the basis of [official Symfony
 documentation][14]. Most snippets of code were taken from there, though 
 not without my own contribution.
 
-The following optional vendor bundles were included:
+Optional vendor bundles included:
 ------------------------------------------------
 
   * [components/jquery][15]
 
   * [twbs/bootstrap][16]
+
+  * [aulfraile/ladybug][17]
 
 Below follows the standard part of Symfony Standard Edition 2.3.* README.
 
@@ -101,5 +103,6 @@ Enjoy!
 [12]: http://symfony.com/doc/2.3/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
 [14]: http://symfony.com/doc/2.3/cookbook/form/form_collections.html
-[15]: https://github.com/components/jquery
-[16]: https://github.com/twbs/bootstrap
+[15]: http://github.com/components/jquery
+[16]: http://github.com/twbs/bootstrap
+[17]: http://github.com/raulfraile/LadybugBundle
