@@ -1,4 +1,4 @@
-Example of Symfony collection of forms embedding
+Symfony forms collection embedding example
 ================================================
 
 One of the most challenging task a web developers face is dealing with forms.
