@@ -23,7 +23,7 @@ documentation][14]. Most snippets of code were taken from there, though
 not without my own contribution.
 
 Optional vendor bundles included:
-------------------------------------------------
+---------------------------------
 
   * [components/jquery][15]
 
@@ -31,6 +31,26 @@ Optional vendor bundles included:
 
   * [aulfraile/ladybug][17]
 
+Installation:
+-------------
+
+  * git clone git@github.com:aloisebersteif/symfony2-cf.git
+
+  * pull vendor bundles using composer.phar: php composer.phar update
+
+  * run web/config.php to set up connection with db
+
+  * create database and db schema:
+
+  ** php app/console doctrine:schema:create
+  
+  ** php app/console doctrine:schema:update
+
+  * set permissions for logs and cache directories: chmod 777 -R app/logs
+    app/cache
+
+  * now you can view the result at: http://localhost/symfony2-cf/web/app_dev.php
+  
 Below follows the standard part of Symfony Standard Edition 2.3.* README.
 
 Symfony Standard Edition
